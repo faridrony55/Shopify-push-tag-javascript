@@ -1,0 +1,48 @@
+<script>
+ 
+    let li = document.querySelector(".step__footer");
+  
+    let note = document.createElement('div');
+  		note.id = "note";
+  
+    var label = document.createElement('label');
+  	label.for = "notebook";
+  	label.innerHTML = "I agree to receive recurring automated marketing text messages (e.g. cart reminders) at the phone number provided. Consent is not a condition to purchase. Msg and data rates may apply. Msg frequency varies. Reply HELP for help and STOP to cancel. View our Terms of Service and Privacy Policy.";
+  
+  	var checkbox = document.createElement('input');
+        checkbox.type = "checkbox";
+        checkbox.name = "name";
+        checkbox.value = "value";
+        checkbox.id = "notebook"; 
+        checkbox.checked = "checked"; 
+  		checkbox.classList.add("input-checkbox");
+  
+  
+      note.append(label);
+      note.append(checkbox);
+  
+        li.before(note);
+ 
+ 
+</script>
+
+<style>
+  
+ #note {
+    max-width: 100%;
+    width: 100%;
+    order: 1;
+    flex: 1 0 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+   padding:10px 0;
+}
+  #note label{}
+  #note input{
+  	    -webkit-appearance: auto;
+    	-moz-appearance: auto;
+    	appearance: auto;
+    margin-right:10px;
+  }
+</style>
